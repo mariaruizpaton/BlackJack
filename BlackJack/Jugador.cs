@@ -8,12 +8,14 @@ namespace BlackJack
 {
     internal class Jugador
     {
-        private string Nombre { get; set; }
-        private List<Carta> Mano { get; set; }
+        private Jugador nombre;
 
-        public Jugador(string Nombre)
+        public string Nombre { get; set; }
+        public List<Carta> Mano { get; private set; }
+
+        public Jugador(string nombre)
         {
-            this.Nombre = Nombre;
+            Nombre = nombre;
             Mano = new List<Carta>();
         }
 
